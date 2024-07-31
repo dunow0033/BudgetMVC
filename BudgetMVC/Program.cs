@@ -1,7 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using BudgetMVC.Data;
+using BudgetMVC.Services;
+using System.Globalization;
+using BudgetMVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+CultureInfo culture = new CultureInfo("en-US");
+culture.NumberFormat.NumberDecimalSeparator = ".";
+culture.NumberFormat.NumberGroupSeparator = ",";
+CultureInfo.DefaultThreadCurrentCulture = culture;
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<CategoryService, CategoryService>();
+builder.Services.AddTransient<TransactionService, TransactionService>();
 
 var app = builder.Build();
 

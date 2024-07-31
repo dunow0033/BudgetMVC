@@ -12,6 +12,7 @@ namespace BudgetMVC.Models
         public string Name { get; set; }
         public string CurrencyCode { get; set; }
         public string CurrencyNativeSymbol { get; set; }
+
         [Range(0, int.MaxValue, ErrorMessage = "The value must be positive.")]
         [DataType(DataType.Currency)]
         [Required]
