@@ -1,7 +1,6 @@
 ﻿using BudgetMVC.Models;
 using BudgetMVC.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Transactions;
 
 namespace BudgetMVC.Services
 {
@@ -12,27 +11,31 @@ namespace BudgetMVC.Services
         {
             _context = context;
         }
-        public List<Models.Transaction> GetAllTransactions()
+        public List<Transaction> GetAllTransactions()
         {
             var transactions = _context.Transactions.ToList();
 
             return transactions;
         }
-        public void AddTransaction(Models.Transaction transaction)
+        public void AddTransaction(Transaction transaction)
         {
             _context.Transactions.Add(transaction);
 
             _context.SaveChanges();
         }
 
-        public void DeleteTransaction(Models.Transaction transaction)
+        public void DeleteTransaction(Transaction transaction)
         {
-            throw new NotImplementedException();
+            _context.Transactions.Remove(transaction);
+
+            _context.SaveChanges();
         }
 
-        public void UpdateTransaction(Models.Transaction transaction)
+        public void UpdateTransaction(Transaction transaction)
         {
-            throw new NotImplementedException();
+            _context.Transactions.Update(transaction);
+
+            _context.SaveChanges();
         }
     }
 }

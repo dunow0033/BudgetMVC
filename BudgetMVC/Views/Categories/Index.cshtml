@@ -1,0 +1,23 @@
+﻿@model BudgetMVC.Models.ViewModel.CategoryViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="buttons" id="categorybuttons">
+    <a button type="button" class="btn btn-success" data-toggle="modal" data-target="addTransactionModal" onclick="showTransactionModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+        </svg>
+        New transaction
+    </a>
+    <a button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Transactions")'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+        </svg>
+        Transaction history
+    </a>
+    <button button type="button" class="btn btn-success" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Show spendings by date
+    </button>
+</div>

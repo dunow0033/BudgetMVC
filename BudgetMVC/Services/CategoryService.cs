@@ -13,42 +13,30 @@ namespace BudgetMVC.Services
 
         public List<Category> GetAllCategories()
         {
-            throw new NotImplementedException();
+            var categories = _context.Categories.ToList();
+
+            return categories;
         }
 
         public void AddCategory(Category category)
         {
-            throw new NotImplementedException();
+            _context.Categories.Add(category);
+
+            _context.SaveChanges();
         }
 
         public void DeleteCategory(Category category)
         {
-            throw new NotImplementedException();
+            _context.Categories.Remove(category);
+
+            _context.SaveChanges();
         }
 
-        void UpdateCategory(Category category)
+        public void UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
-        }
+            _context.Categories.Update(category);
 
-        List<Category> ICategoryService.GetAllCategories()
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICategoryService.AddCategory(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICategoryService.DeleteCategory(Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ICategoryService.UpdateCategory(Category category)
-        {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
     }
 }
