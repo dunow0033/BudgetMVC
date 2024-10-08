@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\source\\repos\\BudgetMVC\\BudgetMVC\\wwwroot\\data\\currency-data.json",
+      "PackagePath": "staticwebassets\\data\\currency-data.json"
+    },
+    {
       "Id": "C:\\Users\\Admin\\source\\repos\\BudgetMVC\\BudgetMVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

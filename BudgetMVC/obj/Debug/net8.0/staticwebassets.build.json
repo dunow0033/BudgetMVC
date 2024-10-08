@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G9IdA2F2zHlFJI5xtDln5M2jq3q5pA783u5WfUAcE+w=",
+  "Hash": "RXKOQrWuQ3ZBemJ1sOJ9EmY1QCc8y8JGueQYTYj6DlE=",
   "Source": "BudgetMVC",
   "BasePath": "_content/BudgetMVC",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\BudgetMVC\\BudgetMVC\\wwwroot\\data\\currency-data.json",
+      "SourceId": "BudgetMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\BudgetMVC\\BudgetMVC\\wwwroot\\",
+      "BasePath": "_content/BudgetMVC",
+      "RelativePath": "data/currency-data.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\currency-data.json"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\BudgetMVC\\BudgetMVC\\wwwroot\\favicon.ico",
