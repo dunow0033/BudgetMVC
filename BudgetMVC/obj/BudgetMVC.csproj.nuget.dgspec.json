@@ -72,6 +72,10 @@
             "TeixeiraSoftware.Finance.Currency": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.3.3, )"
             }
           },
           "imports": [
